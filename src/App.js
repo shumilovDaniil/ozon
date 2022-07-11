@@ -9,12 +9,6 @@ import { fetchGoods } from "./redux/slices/goodsSlice";
 import { useEffect } from "react";
 
 function App() {
-  const dispatch = useDispatch();
-  const goods = useSelector((state) => state.goods.goods);
-
-  useEffect(() => {
-    dispatch(fetchGoods());
-  }, []);
 
   return (
     <>

@@ -30,7 +30,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
   }
 
@@ -48,7 +47,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1;
     font-size: 14px;
-    font-family: 'GT Eesti Pro Text', sans-serif;
+    font-family: "GT Eesti Pro Text",  arial,sans-serif;
     color: #001a34;
   }
 
