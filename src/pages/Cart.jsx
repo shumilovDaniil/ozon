@@ -17,7 +17,7 @@ export default function Cart() {
           <div className="actions__top">
             <input type="checkbox" id="check_all"></input>
             <label for="check_all">Выбрать всё</label>
-            <button>Удалить выбранные</button>
+            <button className="delete__btn">Удалить выбранные</button>
           </div>
           <div className="cart__items">
             <div className="cart__item">
@@ -65,26 +65,28 @@ export default function Cart() {
           </div>
         </div>
         <div className="content__right">
-          <button>Перейти к оформлению</button>
-          <p>
-            Доступные способы и время доставки можно выбрать при оформлении
-            заказа
-          </p>
+          <div className="content__order">
+            <button>Перейти к оформлению</button>
+            <p>
+              Доступные способы и время доставки можно выбрать при оформлении
+              заказа
+            </p>
+          </div>
 
           <div className="your-cart">
-            <div className="your-cart__header">
-              <h3>Ваша корзина</h3>
-              <div>
+            <div className="your-cart__block">
+              <h3 className="your-cart__title">Ваша корзина</h3>
+              <div className="your-cart__value">
                 <span>75 товаров</span>
                 <span>15,24 кг</span>
               </div>
             </div>
 
-            <div>
+            <div className="your-cart__block">
               <span>Товары (75)</span>
               <span>164 959 ₽</span>
             </div>
-            <div>
+            <div className="your-cart__block">
               <div>
                 <span>Скидка</span>
                 <span>Подробнее</span>
@@ -92,11 +94,11 @@ export default function Cart() {
               <span>- 87 371 ₽</span>
             </div>
 
-            <div>
-              <span>Общая стоимость</span>
+            <div className="your-cart__block">
+              <h3 className="your-cart__title">Общая стоимость</h3>
               <span>77 588 ₽</span>
             </div>
-            <div>
+            <div className="your-cart__block">
               <span>
                 При оплате <Link to="/">Ozon Счётом</Link>
               </span>
@@ -145,17 +147,100 @@ const Wrapper = styled.div`
 
   .actions__top {
     padding: 10px 0;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .delete__btn {
+      color: #f91155;
+    }
   }
 
   .cart__items {
-    /* display: flex; */
+    display: flex;
   }
 
   .cart__item {
     display: flex;
+    gap: 20px;
+
+    img {
+      width: 92px;
+      height: 92px;
+      object-fit: cover;
+    }
+  }
+
+  .cart__item-info {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
   }
 
+  .cart__item-actions {
+    button {
+      color: #005bff;
+    }
+  }
+
   .content__right {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .content__order {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    button {
+      width: 100%;
+      border-radius: 12px;
+      min-height: 56px;
+      min-width: 224px;
+      padding: 0 24px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      background-color: #10c44c;
+      color: #fff;
+      font-weight: 600;
+      transition: background 0.2s ease-out;
+    }
+
+    p {
+      color: #808d9a;
+    }
+  }
+
+  .btn__order {
+    &:hover {
+      background-color: #11b648;
+    }
+  }
+
+  .your-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+
+    &__block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__title {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.4em;
+      margin-bottom: 10px;
+    }
+
+    &__value {
+      display: flex;
+      gap: 5px;
+    }
   }
 `;

@@ -45,3 +45,10 @@ const goodsSlice = createSlice({
 });
 
 export default goodsSlice.reducer;
+
+async function fetchData() {
+  const res = await fetch("http://localhost:3001/posts").then(
+    (res) => res.json
+  );
+  return res;
+}
