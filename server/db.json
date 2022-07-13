@@ -144,15 +144,6 @@
       "delivery-date": "14.07.2022",
       "discount": "51",
       "img": "https://cdn1.ozone.ru/s3/multimedia-2/wc250/6344240822.jpg"
-    },
-    {
-      "id": 13,
-      "title": "Чайник электрический Rohaus 1,7 л / электрический чайник / чайник стеклянный / чайник электрический прозрачный / чайник прозрачный / чайник электрический стеклянный / электрочайник / электрические чайники",
-      "price": "1742",
-      "old-price": "4042",
-      "delivery-date": "14.07.2022",
-      "discount": "56",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-j/wc200/6356429971.jpg"
     }
   ],
   "favorite": [
@@ -163,7 +154,8 @@
       "old-price": "14122",
       "delivery-date": "19.07.2022",
       "discount": "65",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-p/wc250/6255883885.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-p/wc250/6255883885.jpg",
+      "stock": true
     },
     {
       "id": 11111111111111110000,
@@ -172,7 +164,18 @@
       "old-price": "2699",
       "delivery-date": "17.07.2022",
       "discount": "51",
-      "img": "https://cdёn1.ozone.ru/s3/multimedia-7/wc250/6310098283.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-7/wc250/6310098283.jpg",
+      "stock": false
+    },
+    {
+      "id": 9,
+      "title": "Робот-пылесос  Polaris  PVCR 1226, золотой",
+      "price": "14999",
+      "old-price": "41399",
+      "delivery-date": "14.07.2022",
+      "discount": "63",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-l/wc250/6338680389.jpg",
+      "stock": "all"
     }
   ]
 }

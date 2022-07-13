@@ -2,10 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Goods from "../components/Goods/Goods";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { fetchFavorite } from "../redux/slices/favoriteSlice";
+import { filterFavorite } from "../redux/slices/favoriteSlice";
 
 export default function Favorite() {
-  const goods = useSelector((state) => state.goods.goods);
+  const favorite = useSelector((state) => state.favorite.favorite);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchFavorite());
+  }, []);
 
   return (
     <Wrapper>
@@ -28,33 +35,40 @@ export default function Favorite() {
           <li>
             <Link to="/">Наличие товаров</Link>
           </li>
-          <li>
-            <input
-              className="checkbox"
-              type="checkbox"
-              id="goods__no_matter"
-            ></input>
-            <label htmlFor="goods__no_matter">Неважно!</label>
-          </li>
-          <li>
-            <input
-              className="checkbox"
-              type="checkbox"
-              id="goods__in_stock"
-            ></input>
-            <label htmlFor="goods__in_stock">Выбрать всё</label>
-          </li>
-          <li>
-            <input
-              className="checkbox"
-              type="checkbox"
-              id="goods__out_stock"
-            ></input>
-            <label htmlFor="goods__out_stock">Выбрать всё</label>
-          </li>
         </ul>
+        <div>
+          <input
+            className="checkbox"
+            type="radio"
+            id="goods__no_matter"
+            defaultChecked
+            name="stock"
+            onClick={() => dispatch(filterFavorite("all"))}
+          ></input>
+          <label htmlFor="goods__no_matter">Неважно</label>
+        </div>
+        <div>
+          <input
+            className="checkbox"
+            type="radio"
+            id="goods__in_stock"
+            name="stock"
+            onClick={() => dispatch(filterFavorite(true))}
+          ></input>
+          <label htmlFor="goods__in_stock">В наличии</label>
+        </div>
+        <div>
+          <input
+            className="checkbox"
+            type="radio"
+            id="goods__out_stock"
+            name="stock"
+            onClick={() => dispatch(filterFavorite(false))}
+          ></input>
+          <label htmlFor="goods__out_stock">Не в наличии</label>
+        </div>
       </aside>
-      <Goods goods={goods} />
+      <Goods goods={favorite} />
     </Wrapper>
   );
 }
