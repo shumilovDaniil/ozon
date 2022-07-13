@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { ButtonBlue } from "../../styles/style";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/slices/cartSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 
 export default function GoodsItem(props) {
+  const dispatch = useDispatch();
   const {
     "delivery-date": deliveryDate,
     id,
@@ -15,8 +15,7 @@ export default function GoodsItem(props) {
     discount,
     img,
   } = props;
-  const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cart.cart);
+
   return (
     <Wrapper>
       <div className="image">

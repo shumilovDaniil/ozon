@@ -47,7 +47,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1;
     font-size: 14px;
-    font-family: "GT Eesti Pro Text",  arial,sans-serif;
+    font-family: "Roboto", arial,sans-serif;
     color: #001a34;
   }
 
@@ -104,7 +104,11 @@ export const GlobalStyle = createGlobalStyle`
     *zoom: 1;
     max-width: 100%;
   }
-
+  .container {
+    max-width: 1446px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
   /**
    * Prevent modern browsers from displaying \`audio\` without controls.
    * Remove excess height in iOS 5 devices.

@@ -116,5 +116,63 @@
       "discount": "56",
       "img": "https://cdn1.ozone.ru/s3/multimedia-j/wc200/6356429971.jpg"
     }
+  ],
+  "cart": [
+    {
+      "id": 3,
+      "title": "Босоножки T.TACCARDI",
+      "price": "1346",
+      "old-price": "2546",
+      "delivery-date": "17.07.2022",
+      "discount": "47",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-w/wc500/6231525032.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Соль для посудомоечной машины Somat, 1,5 кг",
+      "price": "239",
+      "old-price": "300",
+      "delivery-date": "14.07.2022",
+      "discount": "21",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-3/wc250/6354374751.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Детская коляска Cybex Balios S Lux BLK 2 в 1 Navy Black_STRENGTH",
+      "price": "40366",
+      "old-price": "83666",
+      "delivery-date": "14.07.2022",
+      "discount": "51",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-2/wc250/6344240822.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Чайник электрический Rohaus 1,7 л / электрический чайник / чайник стеклянный / чайник электрический прозрачный / чайник прозрачный / чайник электрический стеклянный / электрочайник / электрические чайники",
+      "price": "1742",
+      "old-price": "4042",
+      "delivery-date": "14.07.2022",
+      "discount": "56",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-j/wc200/6356429971.jpg"
+    }
+  ],
+  "favorite": [
+    {
+      "id": 22222222222222220000,
+      "title": "VALTERA Серьги конго / кольца / серебро 925 пробы / с нано",
+      "price": "4405",
+      "old-price": "14122",
+      "delivery-date": "19.07.2022",
+      "discount": "65",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-p/wc250/6255883885.jpg"
+    },
+    {
+      "id": 11111111111111110000,
+      "title": "Шорты Koton",
+      "price": "1299",
+      "old-price": "2699",
+      "delivery-date": "17.07.2022",
+      "discount": "51",
+      "img": "https://cdёn1.ozone.ru/s3/multimedia-7/wc250/6310098283.jpg"
+    }
   ]
 }

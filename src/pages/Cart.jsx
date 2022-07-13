@@ -1,67 +1,35 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import Goods from "./../components/Goods/Goods";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import CartItem from "../components/CartItem";
+import { fetchCart } from "./../redux/slices/cartSlice";
+import { useEffect } from "react";
 
 export default function Cart() {
-  const cart = useSelector((state) => state.cart.cart);
+  const dispatch = useDispatch();
+  const cartGoods = useSelector((state) => state.cart.cart);
+
+  useEffect(() => {
+    dispatch(fetchCart());
+  }, []);
 
   return (
     <Wrapper>
       <h2>
-        Корзина <span>44</span>
+        Корзина <span>{cartGoods.length}</span>
       </h2>
       <div className="content">
         <div className="content__left">
           <div className="actions__top">
-            <input type="checkbox" id="check_all"></input>
-            <label for="check_all">Выбрать всё</label>
+            <input className="checkbox" type="checkbox" id="check_all"></input>
+            <label htmlFor="check_all">Выбрать всё</label>
             <button className="delete__btn">Удалить выбранные</button>
           </div>
           <div className="cart__items">
-            <div className="cart__item">
-              <input type="checkbox" name="" id="" />
-              <img
-                src="https://cdn1.ozone.ru/s3/multimedia-n/wc100/6247837487.jpg"
-                alt=""
-              />
-              <div className="cart__item-info">
-                <h4>
-                  Беспроводные наушники Air Pro 9 TWS Сенсорные с микрофоном /
-                  Для IPhone / Android. Гарнитура. / Белый / Bluetooth 5.0
-                </h4>
-                <span>цвет белый, 80 гр</span>
-                <span className="brand">Nezzah</span>
-                <strong>В рассрочку по 110 ₽ / мес</strong>
-                <div className="cart__item-actions">
-                  <button>В избранное</button>
-                  <button>Удалить</button>
-                </div>
-              </div>
-
-              <div className="cart__item-price">
-                <strong>43 560 ₽</strong>
-                <div>
-                  98 010 ₽<span>Скидка 54 450 ₽</span>
-                </div>
-                <strong>39 534 ₽ с Ozon Счётом</strong>
-              </div>
-
-              <div className="select">
-                <select>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                </select>
-                <p>666 ₽ / шт.</p>
-              </div>
-            </div>
+            {cartGoods.map((item) => {
+              return <CartItem key={item.id} {...item} />;
+            })}
           </div>
         </div>
         <div className="content__right">
@@ -107,25 +75,25 @@ export default function Cart() {
           </div>
         </div>
       </div>
-
-      <Goods goods={cart} />
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
-  background-color: #f2f2f2;
-
   h2 {
+    position: relative;
+    display: inline-block;
     font-size: 30px;
     font-weight: 700;
     padding: 7px 0;
 
     span {
       color: #707f8d;
-      font-size: 15px;
+      font-size: 18px;
       height: 20px;
-      margin: 0 0 12px 2px;
+      position: absolute;
+      top: 8px;
+      right: -12px;
     }
   }
 
@@ -143,6 +111,7 @@ const Wrapper = styled.div`
   }
 
   .content__left {
+    flex: 0 1 70%;
   }
 
   .actions__top {
@@ -159,11 +128,14 @@ const Wrapper = styled.div`
 
   .cart__items {
     display: flex;
+    flex-direction: column;
+    gap: 30px 0;
   }
 
   .cart__item {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 32px;
 
     img {
       width: 92px;
@@ -172,10 +144,17 @@ const Wrapper = styled.div`
     }
   }
 
+  .checkbox {
+    width: 18px;
+    height: 18px;
+    margin: auto 0;
+  }
+
   .cart__item-info {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    flex: 1 1 auto;
   }
 
   .cart__item-actions {
@@ -184,16 +163,44 @@ const Wrapper = styled.div`
     }
   }
 
+  .cart__item-price {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .price-now {
+      font-size: 22px;
+    }
+
+    .price-old {
+      text-decoration: line-through;
+      font-size: 18px;
+      color: #808d9a;
+    }
+
+    .price-discount {
+      color: #f91155;
+    }
+
+    .price-row {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+  }
+
   .content__right {
     display: flex;
     flex-direction: column;
     gap: 35px;
+    flex: 0 1 30%;
   }
 
   .content__order {
     display: flex;
     gap: 10px;
     flex-direction: column;
+
     button {
       width: 100%;
       border-radius: 12px;
