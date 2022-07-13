@@ -13,7 +13,7 @@ export const fetchCart = createAsyncThunk(
       const response = await fetch("http://localhost:3001/cart");
 
       if (!response.ok) {
-        throw new Error("Server error");
+        throw new Error("cart/fetchCart error");
       }
 
       const data = await response.json();
@@ -33,7 +33,7 @@ export const deleteFromCart = createAsyncThunk(
       });
 
       if (!response.ok) {
-        throw new Error("server error");
+        throw new Error("cart/deleteFromCart error");
       }
       dispatch(removeFromCart({ id }));
     } catch (error) {
@@ -53,7 +53,7 @@ export const addToCart = createAsyncThunk(
       });
 
       if (!response.ok) {
-        throw new Error("server error");
+        throw new Error("cart/addToCart error");
       }
 
       const data = await response.json();

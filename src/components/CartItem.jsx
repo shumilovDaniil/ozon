@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteFromCart } from "../redux/slices/cartSlice";
+import { addToFavorite } from "./../redux/slices/favoriteSlice";
 
 const CartItem = (item) => {
   const dispatch = useDispatch();
@@ -16,7 +17,9 @@ const CartItem = (item) => {
         <span className="brand">Nezzah</span>
         <strong>В рассрочку по 110 ₽ / мес</strong>
         <div className="cart__item-actions">
-          <button>В избранное</button>
+          <button onClick={() => dispatch(addToFavorite(item))}>
+            В избранное
+          </button>
           <button onClick={() => dispatch(deleteFromCart(id))}>Удалить</button>
         </div>
       </div>

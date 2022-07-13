@@ -13,13 +13,14 @@ export const fetchGoods = createAsyncThunk(
       const response = await fetch("http://localhost:3001/posts");
 
       if (!response.ok) {
-        throw new Error("Server error");
+        throw new Error("goods/fetchGoods error");
       }
 
       const data = await response.json();
       return data;
-    } catch (err) {
-      return rejectWithValue(err.message);
+    } catch (error) {
+      console.log(error);
+      return rejectWithValue(error.message);
     }
   }
 );

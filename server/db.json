@@ -7,7 +7,8 @@
       "old-price": "14122",
       "delivery-date": "19.07.2022",
       "discount": "65",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-p/wc250/6255883885.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-p/wc250/6255883885.jpg",
+      "stock": "all"
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "old-price": "2699",
       "delivery-date": "17.07.2022",
       "discount": "51",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-7/wc250/6310098283.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-7/wc250/6310098283.jpg",
+      "stock": true
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "old-price": "2546",
       "delivery-date": "17.07.2022",
       "discount": "47",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-w/wc500/6231525032.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-w/wc500/6231525032.jpg",
+      "stock": false
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "old-price": "7929",
       "delivery-date": "17.07.2022",
       "discount": "23",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-4/wc250/6357438388.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-4/wc250/6357438388.jpg",
+      "stock": "all"
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "old-price": "23290",
       "delivery-date": "14.07.2022",
       "discount": "40",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-3/wc200/6162109587.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-3/wc200/6162109587.jpg",
+      "stock": true
     },
     {
       "id": 6,
@@ -51,7 +56,8 @@
       "price": "39990",
       "old-price": "47100",
       "discount": "15",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-d/wc250/6208372081.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-d/wc250/6208372081.jpg",
+      "stock": "all"
     },
     {
       "id": 7,
@@ -60,7 +66,8 @@
       "old-price": "842",
       "delivery-date": "18.07.2022",
       "discount": "19",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-k/wc250/6324760448.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-k/wc250/6324760448.jpg",
+      "stock": "all"
     },
     {
       "id": 8,
@@ -69,7 +76,8 @@
       "old-price": "5490",
       "delivery-date": "14.07.2022",
       "discount": "41",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-v/wc500/6058226647.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-v/wc500/6058226647.jpg",
+      "stock": "all"
     },
     {
       "id": 9,
@@ -78,7 +86,8 @@
       "old-price": "41399",
       "delivery-date": "14.07.2022",
       "discount": "63",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-l/wc250/6338680389.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-l/wc250/6338680389.jpg",
+      "stock": "all"
     },
     {
       "id": 10,
@@ -87,7 +96,8 @@
       "old-price": "300",
       "delivery-date": "14.07.2022",
       "discount": "21",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-3/wc250/6354374751.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-3/wc250/6354374751.jpg",
+      "stock": true
     },
     {
       "id": 11,
@@ -96,7 +106,8 @@
       "old-price": "83666",
       "delivery-date": "14.07.2022",
       "discount": "51",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-2/wc250/6344240822.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-2/wc250/6344240822.jpg",
+      "stock": false
     },
     {
       "id": 12,
@@ -105,7 +116,8 @@
       "old-price": "2899",
       "delivery-date": "14.07.2022",
       "discount": "40",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-q/wc250/6118137410.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-q/wc250/6118137410.jpg",
+      "stock": false
     },
     {
       "id": 13,
@@ -114,10 +126,21 @@
       "old-price": "4042",
       "delivery-date": "14.07.2022",
       "discount": "56",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-j/wc200/6356429971.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-j/wc200/6356429971.jpg",
+      "stock": true
     }
   ],
   "cart": [
+    {
+      "id": 9,
+      "title": "Робот-пылесос  Polaris  PVCR 1226, золотой",
+      "price": "14999",
+      "old-price": "41399",
+      "delivery-date": "14.07.2022",
+      "discount": "63",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-l/wc250/6338680389.jpg",
+      "stock": "all"
+    },
     {
       "id": 3,
       "title": "Босоножки T.TACCARDI",
@@ -125,16 +148,50 @@
       "old-price": "2546",
       "delivery-date": "17.07.2022",
       "discount": "47",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-w/wc500/6231525032.jpg"
+      "img": "https://cdn1.ozone.ru/s3/multimedia-w/wc500/6231525032.jpg",
+      "stock": false
     },
     {
-      "id": 10,
-      "title": "Соль для посудомоечной машины Somat, 1,5 кг",
-      "price": "239",
-      "old-price": "300",
+      "id": 2,
+      "title": "Шорты Koton",
+      "price": "1299",
+      "old-price": "2699",
+      "delivery-date": "17.07.2022",
+      "discount": "51",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-7/wc250/6310098283.jpg",
+      "stock": true
+    }
+  ],
+  "favorite": [
+    {
+      "id": 3,
+      "title": "Босоножки T.TACCARDI",
+      "price": "1346",
+      "old-price": "2546",
+      "delivery-date": "17.07.2022",
+      "discount": "47",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-w/wc500/6231525032.jpg",
+      "stock": false
+    },
+    {
+      "id": 4,
+      "title": "Вертикальный отпариватель Philips GC483/30 Easy Touch, белый, фиолетовый",
+      "price": "5923",
+      "old-price": "7929",
+      "delivery-date": "17.07.2022",
+      "discount": "23",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-4/wc250/6357438388.jpg",
+      "stock": "all"
+    },
+    {
+      "id": 5,
+      "title": "Кофеварка рожковая Vitek VT-1517, коричневый",
+      "price": "13919",
+      "old-price": "23290",
       "delivery-date": "14.07.2022",
-      "discount": "21",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-3/wc250/6354374751.jpg"
+      "discount": "40",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-3/wc200/6162109587.jpg",
+      "stock": true
     },
     {
       "id": 11,
@@ -143,28 +200,7 @@
       "old-price": "83666",
       "delivery-date": "14.07.2022",
       "discount": "51",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-2/wc250/6344240822.jpg"
-    }
-  ],
-  "favorite": [
-    {
-      "id": 22222222222222220000,
-      "title": "VALTERA Серьги конго / кольца / серебро 925 пробы / с нано",
-      "price": "4405",
-      "old-price": "14122",
-      "delivery-date": "19.07.2022",
-      "discount": "65",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-p/wc250/6255883885.jpg",
-      "stock": true
-    },
-    {
-      "id": 11111111111111110000,
-      "title": "Шорты Koton",
-      "price": "1299",
-      "old-price": "2699",
-      "delivery-date": "17.07.2022",
-      "discount": "51",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-7/wc250/6310098283.jpg",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-2/wc250/6344240822.jpg",
       "stock": false
     },
     {
@@ -176,6 +212,16 @@
       "discount": "63",
       "img": "https://cdn1.ozone.ru/s3/multimedia-l/wc250/6338680389.jpg",
       "stock": "all"
+    },
+    {
+      "id": 2,
+      "title": "Шорты Koton",
+      "price": "1299",
+      "old-price": "2699",
+      "delivery-date": "17.07.2022",
+      "discount": "51",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-7/wc250/6310098283.jpg",
+      "stock": true
     }
   ]
 }
