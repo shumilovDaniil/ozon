@@ -34,7 +34,7 @@ export default function Favorite() {
               type="checkbox"
               id="goods__no_matter"
             ></input>
-            <label htmlFor="goods__no_matter">Неважно</label>
+            <label htmlFor="goods__no_matter">Неважно!</label>
           </li>
           <li>
             <input
