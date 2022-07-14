@@ -30,7 +30,6 @@ const CartItem = (item) => {
           <div className="price-old">{oldPrice} ₽</div>
           <span className="price-discount">Скидка {discount}%</span>
         </div>
-        <strong>39 534 ₽ с Ozon Счётом</strong>
       </div>
 
       <div className="select">

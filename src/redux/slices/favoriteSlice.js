@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 const initialState = {
   favorite: [],
   status: null,
-  error: null,
+  error: null
 };
 
 export const fetchFavorite = createAsyncThunk(
@@ -56,7 +56,7 @@ export const addToFavorite = createAsyncThunk(
       const response = await fetch("http://localhost:3001/favorite", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(item),
+        body: JSON.stringify(item)
       });
 
       if (!response.ok) {
@@ -77,7 +77,7 @@ const favoriteSlice = createSlice({
   reducers: {
     onFilterFavorite(state, { payload }) {
       state.favorite = payload;
-    },
+    }
   },
   extraReducers: {
     [fetchFavorite.pending]: (state, action) => {
@@ -91,8 +91,8 @@ const favoriteSlice = createSlice({
     [fetchFavorite.reject]: (state, action) => {
       state.status = "rejected";
       state.error = action.payload;
-    },
-  },
+    }
+  }
 });
 
 export default favoriteSlice.reducer;

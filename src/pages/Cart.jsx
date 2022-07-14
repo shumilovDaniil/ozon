@@ -1,14 +1,15 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import CartItem from "../components/CartItem";
 import { fetchCart } from "./../redux/slices/cartSlice";
-import { useEffect } from "react";
+import { useSumCart } from "../hooks/useSumCart";
 
 export default function Cart() {
   const dispatch = useDispatch();
   const cartGoods = useSelector((state) => state.cart.cart);
+  const sumCart = useSumCart(cartGoods);
 
   useEffect(() => {
     dispatch(fetchCart());
@@ -45,32 +46,31 @@ export default function Cart() {
             <div className="your-cart__block">
               <h3 className="your-cart__title">Ваша корзина</h3>
               <div className="your-cart__value">
-                <span>75 товаров</span>
-                <span>15,24 кг</span>
+                <span>{cartGoods.length} {cartGoods.length === 1 ? "товар" : cartGoods.length > 1 && cartGoods.length < 5 ? "товара" : "товаров"} </span>
+                <span></span>
               </div>
             </div>
 
             <div className="your-cart__block">
-              <span>Товары (75)</span>
-              <span>164 959 ₽</span>
+              <span>Товары ({cartGoods.length})</span>
+              <span>{sumCart} ₽</span>
             </div>
             <div className="your-cart__block">
               <div>
                 <span>Скидка</span>
-                <span>Подробнее</span>
               </div>
-              <span>- 87 371 ₽</span>
+              <span>300 ₽</span>
             </div>
 
             <div className="your-cart__block">
               <h3 className="your-cart__title">Общая стоимость</h3>
-              <span>77 588 ₽</span>
+              <span>{sumCart - 300} ₽</span>
             </div>
             <div className="your-cart__block">
               <span>
                 При оплате <Link to="/">Ozon Счётом</Link>
               </span>
-              <span>72 273 ₽</span>
+              <span>{sumCart - 300} ₽</span>
             </div>
           </div>
         </div>

@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const Container = styled.div`
   max-width: 1446px;
   padding: 0 15px;
   margin: 0 auto;
+  flex: 1 1 auto;
 `;
 
 export const GlobalStyle = createGlobalStyle`
@@ -47,7 +47,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1;
     font-size: 14px;
-    font-family: "Roboto", arial,sans-serif;
+    font-family: "Roboto", arial, sans-serif;
     color: #001a34;
   }
 
@@ -104,11 +104,13 @@ export const GlobalStyle = createGlobalStyle`
     *zoom: 1;
     max-width: 100%;
   }
+
   .container {
     max-width: 1446px;
     padding: 0 15px;
     margin: 0 auto;
   }
+
   /**
    * Prevent modern browsers from displaying \`audio\` without controls.
    * Remove excess height in iOS 5 devices.
@@ -393,7 +395,6 @@ export const ButtonBlue = styled.button`
   padding: 10px 20px;
   color: #fff;
   font-weight: 600;
-
   display: flex;
   align-items: center;
   gap: 0 5px;

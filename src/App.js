@@ -4,8 +4,10 @@ import Cart from "./pages/Cart";
 import Favorite from "./pages/Favorite";
 import Home from "./pages/Home";
 import Orders from "./pages/Orders";
-import { Container } from "./styles/style";
 import Footer from "./components/Footer";
+import Product from "./pages/Product";
+import { Container } from "./styles/style";
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/favorite" element={<Favorite />} />
+          <Route path="/product" element={<Product />} />
         </Routes>
       </Container>
       <Footer />
@@ -25,3 +28,4 @@ function App() {
 }
 
 export default App;
+

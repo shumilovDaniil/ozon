@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { ButtonBlue } from "../../styles/style";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/slices/cartSlice";
+import { GrFavorite } from "react-icons/gr";
+import { addToFavorite } from "../../redux/slices/favoriteSlice";
 
 export default function GoodsItem(props) {
   const dispatch = useDispatch();
@@ -13,11 +15,14 @@ export default function GoodsItem(props) {
     price,
     "old-price": oldPrice,
     discount,
-    img,
+    img
   } = props;
 
   return (
     <Wrapper>
+      <div className="favorite__icon">
+        <GrFavorite onClick={() => dispatch(addToFavorite(props))} />
+      </div>
       <div className="image">
         <img src={img} alt="" />
       </div>
@@ -42,17 +47,27 @@ export default function GoodsItem(props) {
 }
 
 const Wrapper = styled.div`
+  position: relative;
   flex: 0 1 216px;
   display: flex;
   gap: 5px 0;
-
   align-self: stretch;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: end;
+  justify-content: center;
+  align-items: flex-end;
 
   .image {
     max-height: 280px;
+  }
+
+  .favorite__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
   }
 
   img {
