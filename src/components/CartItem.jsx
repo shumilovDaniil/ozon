@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteFromCart } from "../redux/slices/cartSlice";
 import { addToFavorite } from "./../redux/slices/favoriteSlice";
+import { Link } from "react-router-dom";
 
 const CartItem = (item) => {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const CartItem = (item) => {
       <input className="checkbox" type="checkbox" name="" id="" />
       <img src={img} alt="" />
       <div className="cart__item-info">
-        <h4>{title}</h4>
+        <h4><Link to={`/product/${id}`}>{title}</Link></h4>
         <span>цвет белый, 80 гр</span>
         <span className="brand">Nezzah</span>
         <strong>В рассрочку по 110 ₽ / мес</strong>

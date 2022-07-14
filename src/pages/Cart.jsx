@@ -129,13 +129,13 @@ const Wrapper = styled.div`
   .cart__items {
     display: flex;
     flex-direction: column;
-    gap: 30px 0;
+    gap: 20px 0;
   }
 
   .cart__item {
     display: flex;
     justify-content: space-between;
-    gap: 32px;
+    gap: 15px;
 
     img {
       width: 92px;
@@ -154,7 +154,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
-    flex: 1 1 auto;
+    flex: 0 1 40%;
   }
 
   .cart__item-actions {

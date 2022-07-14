@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Goods from "../components/Goods/Goods";
-import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
-import { fetchFavorite } from "../redux/slices/favoriteSlice";
-import { filterFavorite } from "../redux/slices/favoriteSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchFavorite, filterFavorite } from "../redux/slices/favoriteSlice";
 
 export default function Favorite() {
   const favorite = useSelector((state) => state.favorite.favorite);
@@ -103,12 +101,17 @@ const Wrapper = styled.div`
 
   aside {
     min-width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
     ul {
       display: flex;
       flex-direction: column;
       gap: 10px;
+
     }
+
     li {
       display: flex;
       align-items: center;

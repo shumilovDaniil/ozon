@@ -132,23 +132,12 @@
   ],
   "cart": [
     {
-      "id": 7,
-      "title": "Зубная паста Biorepair Scudo Attivo активная защита эмали зубов, 75 мл",
-      "price": "678",
-      "old-price": "842",
-      "delivery-date": "18.07.2022",
-      "discount": "19",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-k/wc250/6324760448.jpg",
-      "stock": "all"
-    },
-    {
-      "id": 1,
-      "title": "VALTERA Серьги конго / кольца / серебро 925 пробы / с нано",
-      "price": "4405",
-      "old-price": "14122",
-      "delivery-date": "19.07.2022",
-      "discount": "65",
-      "img": "https://cdn1.ozone.ru/s3/multimedia-p/wc250/6255883885.jpg",
+      "id": 6,
+      "title": "Беговая дорожка Orlauf Kondor для дома, складная, компактная, электрическая",
+      "price": "39990",
+      "old-price": "47100",
+      "discount": "15",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-d/wc250/6208372081.jpg",
       "stock": "all"
     }
   ],
@@ -192,6 +181,15 @@
       "discount": "56",
       "img": "https://cdn1.ozone.ru/s3/multimedia-j/wc200/6356429971.jpg",
       "stock": true
+    },
+    {
+      "id": 6,
+      "title": "Беговая дорожка Orlauf Kondor для дома, складная, компактная, электрическая",
+      "price": "39990",
+      "old-price": "47100",
+      "discount": "15",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-d/wc250/6208372081.jpg",
+      "stock": "all"
     }
   ]
 }

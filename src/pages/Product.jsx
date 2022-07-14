@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ButtonBlue } from "../styles/style";
 import { GrFavorite } from "react-icons/gr";
 import { addToFavorite } from "../redux/slices/favoriteSlice";
 import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/slices/cartSlice";
 
-const Product = (props) => {
+const Product = () => {
   const dispatch = useDispatch();
+  const { id } = useParams();
+  const [post, setPost] = useState([]);
+  const { title, price, "old-price": oldPrice, discount, img } = post;
+
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      const response = await fetch(`http://localhost:3001/posts/${id}`);
+      const data = await response.json();
+      setPost(data);
+    };
+    fetchPost();
+  }, []);
 
   return (
     <Wrapper>
@@ -38,18 +52,18 @@ const Product = (props) => {
       </nav>
       <div className="content">
         <div className="content__image">
-          <img src="https://cdn1.ozone.ru/multimedia/wc1200/1027739591.jpg" alt="" />
+          <img src={img} alt="" />
         </div>
         <div className="content__info">
-          <h3>Наручные часы 33 ELEMENT Серия 7-26 </h3>
+          <h3>{title}</h3>
           <div className="content__price">
-            <span className="now">7 147 ₽</span>
-            <span className="old">9 127 ₽</span>
+            <span className="now">{price} ₽</span>
+            <span className="old">{oldPrice} ₽</span>
           </div>
           <div className="content__btns">
-            <ButtonBlue>Добавить в корзину</ButtonBlue>
+            <ButtonBlue onClick={() => dispatch(addToCart(post))}>Добавить в корзину</ButtonBlue>
             <ButtonBlue>
-              <GrFavorite onClick={() => dispatch(addToFavorite(props))} />
+              <GrFavorite onClick={() => dispatch(addToFavorite(post))} />
             </ButtonBlue>
           </div>
         </div>
@@ -87,8 +101,8 @@ const Wrapper = styled.div`
 
       img {
         object-fit: cover;
-        width: 600px;
-        height: 700px;
+        width: 400px;
+        height: 560px;
       }
     }
 
