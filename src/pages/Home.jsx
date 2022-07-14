@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CarouselBlock from "../components/CarouselBlock";
-import Goods from "../components/Goods/Goods";
-import { useEffect } from "react";
+import Goods from "../components/Goods";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchGoods } from "../redux/slices/goodsSlice";
 

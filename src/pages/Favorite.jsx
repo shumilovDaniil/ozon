@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Goods from "../components/Goods/Goods";
+import Goods from "../components/Goods";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFavorite, filterFavorite } from "../redux/slices/favoriteSlice";
 
