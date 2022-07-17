@@ -1,9 +1,9 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   cart: [],
   status: null,
-  error: null,
+  error: null
 };
 
 export const fetchCart = createAsyncThunk(
@@ -29,7 +29,7 @@ export const deleteFromCart = createAsyncThunk(
   async (id, { rejectWithValue, dispatch }) => {
     try {
       const response = await fetch(`http://localhost:3001/cart/${id}`, {
-        method: "DELETE",
+        method: "DELETE"
       });
 
       if (!response.ok) {
@@ -49,7 +49,7 @@ export const addToCart = createAsyncThunk(
       const response = await fetch(`http://localhost:3001/cart`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(item),
+        body: JSON.stringify(item)
       });
 
       if (!response.ok) {
@@ -70,7 +70,7 @@ const cartSlice = createSlice({
   reducers: {
     removeFromCart(state, { payload }) {
       state.cart = state.cart.filter((i) => i.id !== payload.id);
-    },
+    }
   },
   extraReducers: {
     [fetchCart.pending]: (state, action) => {
@@ -84,8 +84,8 @@ const cartSlice = createSlice({
     [fetchCart.reject]: (state, action) => {
       state.status = "rejected";
       state.error = action.payload;
-    },
-  },
+    }
+  }
 });
 
 export default cartSlice.reducer;

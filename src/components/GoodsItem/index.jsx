@@ -7,7 +7,7 @@ import { GrFavorite } from "react-icons/gr";
 import { addToFavorite } from "../../redux/slices/favoriteSlice";
 import { Link } from "react-router-dom";
 
-export default function GoodsItem(props) {
+export default function GoodsItem(item) {
   const dispatch = useDispatch();
   const {
     "delivery-date": deliveryDate,
@@ -17,12 +17,12 @@ export default function GoodsItem(props) {
     "old-price": oldPrice,
     discount,
     img
-  } = props;
+  } = item;
 
   return (
     <Wrapper>
       <div className="favorite__icon">
-        <GrFavorite onClick={() => dispatch(addToFavorite(props))} />
+        <GrFavorite onClick={() => dispatch(addToFavorite(item))} />
       </div>
       <div className="image">
         <img src={img} alt="" />
@@ -35,7 +35,7 @@ export default function GoodsItem(props) {
         </div>
         <h4><Link to={`/product/${id}`}>{title}</Link></h4>
         <div className="content-bottom">
-          <ButtonBlue onClick={() => dispatch(addToCart(props))}>
+          <ButtonBlue onClick={() => dispatch(addToCart(item))}>
             В корзину
           </ButtonBlue>
           <p>

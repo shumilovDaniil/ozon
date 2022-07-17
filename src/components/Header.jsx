@@ -1,15 +1,18 @@
 import React from "react";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { BsBoxSeam, BsSearch } from "react-icons/bs";
-import { MdFaceUnlock } from "react-icons/md";
+import { MdFaceUnlock, MdOutlinePlace } from "react-icons/md";
 import { AiOutlineHeart } from "react-icons/ai";
 import { CgShoppingCart } from "react-icons/cg";
-import { MdOutlinePlace } from "react-icons/md";
 import styled from "styled-components";
-import { ButtonBlue, Container } from "../styles/style";
+import { ButtonBlue } from "../styles/style";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const favorite = useSelector(state => state.favorite.favorite)
+  const cart = useSelector(state => state.cart.cart)
+
   return (
     <Wrapper>
       <Top>
@@ -82,14 +85,14 @@ const Header = () => {
           </div>
           <div className="actions__item">
             <Link to="favorite">
-              <span>3</span>
+              <span>{favorite.length}</span>
               <AiOutlineHeart />
               <strong>Избранное</strong>
             </Link>
           </div>
           <div className="actions__item">
             <Link to="/cart">
-              <span>75</span>
+              <span>{cart.length}</span>
               <CgShoppingCart />
               <strong>Корзина</strong>
             </Link>

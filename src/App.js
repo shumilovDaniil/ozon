@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import Product from "./pages/Product";
 import { Container } from "./styles/style";
 
-
 function App() {
   return (
     <>
