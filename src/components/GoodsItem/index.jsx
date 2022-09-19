@@ -6,6 +6,8 @@ import { addToCart } from "../../redux/slices/cartSlice";
 import { GrFavorite } from "react-icons/gr";
 import { addToFavorite } from "../../redux/slices/favoriteSlice";
 import { Link } from "react-router-dom";
+import { useDate } from "../../hooks/useDate";
+import { useEffect } from "react";
 
 export default function GoodsItem(item) {
   const dispatch = useDispatch();
@@ -16,7 +18,7 @@ export default function GoodsItem(item) {
     price,
     "old-price": oldPrice,
     discount,
-    img
+    img,
   } = item;
 
   return (
@@ -33,7 +35,11 @@ export default function GoodsItem(item) {
           <strong className="price">{price} ₽</strong>
           <strong className="price-old">{oldPrice} ₽</strong>
         </div>
-        <h4><Link to={`/product/${id}`}>{title}</Link></h4>
+        <h4>
+          <Link to={`/product/${id}`}>
+            {title.split(" ").slice(0, 5).join(" ")} ...
+          </Link>
+        </h4>
         <div className="content-bottom">
           <ButtonBlue onClick={() => dispatch(addToCart(item))}>
             В корзину

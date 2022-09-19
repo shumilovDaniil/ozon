@@ -112,7 +112,7 @@ const Footer = () => {
           </List>
           <div className="footer__info">
             <strong>
-              © 1998 – 2022 ООО «Интернет Решения». Все права защищены.
+              <a href="https://github.com/shumilovDaniil">My Github :)</a>
             </strong>
           </div>
         </div>
