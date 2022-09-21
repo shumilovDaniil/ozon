@@ -4,141 +4,144 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
 
 const Footer = () => {
-  return (
-    <Wrapper>
-      <Container>
-        <div className="footer__content">
-          <List>
-            <li>
-              <Link to="/">Зарабатывайте с Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Ваши товары на Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Продавайте на Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Реферальная программа</Link>
-            </li>
-            <li>
-              <Link to="/">Установите постамат Ozon Box</Link>
-            </li>
-            <li>
-              <Link to="/">Откройте пункт выдачи Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Стать Поставщиком Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Что продавать на Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Selling on Ozon</Link>
-            </li>
-          </List>
-          <List>
-            <li>
-              <Link to="/">Зарабатывайте с Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Ваши товары на Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Продавайте на Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Реферальная программа</Link>
-            </li>
-            <li>
-              <Link to="/">Установите постамат Ozon Box</Link>
-            </li>
-            <li>
-              <Link to="/">Откройте пункт выдачи Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Стать Поставщиком Ozon</Link>
-            </li>
-          </List>
-          <List>
-            <li>
-              <Link to="/">Зарабатывайте с Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Ваши товары на Ozon</Link>
-            </li>
+    return (
+        <Wrapper>
+            <Container>
+                <div className="footer__content">
+                    <List>
+                        <li>
+                            <Link to="/">Зарабатывайте с Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Ваши товары на Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Продавайте на Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Реферальная программа</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Установите постамат Ozon Box</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Откройте пункт выдачи Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Стать Поставщиком Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Что продавать на Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Selling on Ozon</Link>
+                        </li>
+                    </List>
+                    <List>
+                        <li>
+                            <Link to="/">Зарабатывайте с Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Ваши товары на Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Продавайте на Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Реферальная программа</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Установите постамат Ozon Box</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Откройте пункт выдачи Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Стать Поставщиком Ozon</Link>
+                        </li>
+                    </List>
+                    <List>
+                        <li>
+                            <Link to="/">Зарабатывайте с Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Ваши товары на Ozon</Link>
+                        </li>
 
-            <li>
-              <Link to="/">Откройте пункт выдачи Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Стать Поставщиком Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Что продавать на Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Selling on Ozon</Link>
-            </li>
-          </List>
-          <List>
-            <li>
-              <Link to="/">Зарабатывайте с Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Ваши товары на Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Продавайте на Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Реферальная программа</Link>
-            </li>
-            <li>
-              <Link to="/">Установите постамат Ozon Box</Link>
-            </li>
-            <li>
-              <Link to="/">Откройте пункт выдачи Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Стать Поставщиком Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Что продавать на Ozon</Link>
-            </li>
-            <li>
-              <Link to="/">Selling on Ozon</Link>
-            </li>
-          </List>
-          <div className="footer__info">
-            <strong>
-              <a href="https://github.com/shumilovDaniil">My Github :)</a>
-            </strong>
-          </div>
-        </div>
-      </Container>
-    </Wrapper>
-  );
+                        <li>
+                            <Link to="/">Откройте пункт выдачи Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Стать Поставщиком Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Что продавать на Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Selling on Ozon</Link>
+                        </li>
+                    </List>
+                    <List>
+                        <li>
+                            <Link to="/">Зарабатывайте с Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Ваши товары на Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Продавайте на Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Реферальная программа</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Установите постамат Ozon Box</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Откройте пункт выдачи Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Стать Поставщиком Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Что продавать на Ozon</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Selling on Ozon</Link>
+                        </li>
+                    </List>
+                    <div className="footer__info">
+                        <strong>
+                            <a href="https://github.com/shumilovDaniil">
+                                My Github :)
+                            </a>
+                        </strong>
+                    </div>
+                </div>
+            </Container>
+        </Wrapper>
+    );
 };
 
 export default Footer;
 
 const Wrapper = styled.div`
-  background-color: #efefef;
-  margin-top: 50px;
-  padding: 50px 0;
+    background-color: #efefef;
+    margin-top: 50px;
+    padding: 50px 0;
+    flex: 0 0 auto;
 
-  .footer__content {
-    display: flex;
-    gap: 30px;
-  }
+    .footer__content {
+        display: flex;
+        gap: 30px;
+    }
 `;
 
 const List = styled.ul`
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  font-weight: 500;
-  color: #3d5165;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3d5165;
+    gap: 15px;
 `;

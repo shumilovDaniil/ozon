@@ -4,11 +4,11 @@ import cartSlice from "./slices/cartSlice";
 import favoriteSlice from "./slices/favoriteSlice";
 
 const store = configureStore({
-  reducer: {
-    goods: goodsSlice,
-    cart: cartSlice,
-    favorite: favoriteSlice,
-  },
+    reducer: {
+        goods: goodsSlice,
+        cart: cartSlice,
+        favorite: favoriteSlice,
+    },
 });
 
 export default store;
